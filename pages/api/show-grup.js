@@ -1,7 +1,7 @@
 import pool from "/lib/db";
 
 export default async function showDieta(req, res) {
-  if (req.method !== "GET") {
+  if (req.method !== "POST") {
     return res.status(405).json({ error: "Método não permitido" });
   }
 
