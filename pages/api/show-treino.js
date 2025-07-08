@@ -1,6 +1,16 @@
 import pool from "/lib/db";
 
 export default async function showDieta(req, res) {
+  // Habilita CORS
+  res.setHeader("Access-Control-Allow-Origin", "*"); // OU use um domínio específico no lugar de "*"
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // Responde à requisição preflight (OPTIONS)
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método não permitido" });
   }
