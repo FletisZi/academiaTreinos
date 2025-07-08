@@ -1,0 +1,16 @@
+{
+  "name": "academiatreinos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^15.3.4",
+    "pg": "^8.16.2"
+
+  }
+}
