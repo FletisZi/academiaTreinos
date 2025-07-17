@@ -17,6 +17,8 @@ export default async function showDieta(req, res) {
 
   const { id_exercicio, segredo } = req.body;
 
+  console.log(id_exercicio, segredo);
+
   if (!id_exercicio || !segredo) {
     return res.status(400).json({ error: "Dados incompletos" });
   }
